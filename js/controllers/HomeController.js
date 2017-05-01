@@ -116,13 +116,11 @@ app.controller('HomeController', ['$scope', function($scope) {
       };
 	$scope.posterClick = function(index){
             current = $scope.movies[index];
-            if($scope.movies[index].posterindex == $scope.movies[index].posters.length - 1){
-                  $scope.movies[index].posterindex = 0;
-                  $scope.movies[index].posters[posterindex];
+            if(current.posterindex == current.posters.length - 1){
+                  current.posterindex = 0;
             }
             else{
-                  ++$scope.movies[index].posterindex;
-                  $scope.movies[index].posters[posterindex];
+                  ++current.posterindex;
             } 
       };
       $scope.timeText = function(minutes){
