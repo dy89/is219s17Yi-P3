@@ -16,16 +16,16 @@
 	<!-- DO NOT CHANGE ANYTHING ABOVE THIS LINE-->
 
 	<!-- Angular (ADD HERE) -->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	
 </head>
 
-  <body>
+  <body ng-app="IS219Gallery">
 	  
     <div class="header">
 	    
-      <div class="container">
-        <h1 id="app_title">%title%</h1>
+      <div class="container" ng-controller="HomeController">
+        <h1 id="app_title">{{title}}</h1>
       </div>
       
     </div>
@@ -35,20 +35,20 @@
       <div class="container">
 
         <div class="col-md-6"> 
-            <div class="thumbnail">
+            <div class="thumbnail" ng-controller="HomeController">
 
 					<img class="poster" />
-					<div class="imageInfo">%posterindex%</div>
+					<div class="imageInfo">{{posterindex}}</div>
 					
-					<p class="title">%title% (%country%)</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> %iscore% </p>
-					<p class="runtime">Runtime: %runtime%</p> 
-					<p class="released">Released: %released% | Rated: %rating%</p>
-					<p class="websites">Websites: <a>%imdb%</a> | <a>%website%</a></p>
+					<p class="title">{{title}} ({{country}})</p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{iscore}} </p>
+					<p class="runtime">Runtime: {{runtime}}</p> 
+					<p class="released">Released: {{released}} | Rated: {{rating}}</p>
+					<p class="websites">Websites: <a>{{imdb}}</a> | <a>{{website}}</a></p>
 					
 		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> %like%</p>
-		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> %dislike%</p>
+		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{like}}</p>
+		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{dislike}}</p>
 		            </div>
             </div> 
         </div>
@@ -57,9 +57,9 @@
     </div>
 
     <div class="footer">
-      <div class="container">
-		<a id="github" class="btn btn-lg btn-warning">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> %owner% %github%
+      <div class="container" ng-controller="HomeController">
+		<a id="github" class="btn btn-lg btn-warning" ng-href="{{github}}">
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}}
   		</a>
       </div>
     </div>
