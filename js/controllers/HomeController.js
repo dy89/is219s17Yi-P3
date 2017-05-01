@@ -115,11 +115,14 @@ app.controller('HomeController', ['$scope', function($scope) {
             ++$scope.movies[index].dislikes;
       };
 	$scope.posterClick = function(index){
-            if(index = movie.poster.length() - 1){
-                  movie.posterindex = 0;
+            current = $scope.movies[index];
+            if($scope.movies[index].posterindex == $scope.movies[index].posters.length - 1){
+                  $scope.movies[index].posterindex = 0;
+                  $scope.movies[index].posters[posterindex];
             }
             else{
-                  movie.poserindex = index + 1;
+                  ++$scope.movies[index].posterindex;
+                  $scope.movies[index].posters[posterindex];
             } 
       };
       $scope.timeText = function(minutes){
