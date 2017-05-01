@@ -124,7 +124,7 @@ app.controller('HomeController', ['$scope', function($scope) {
             } 
       };
       $scope.timeText = function(minutes){
-            $scope.displayhours = (minutes -(minutes % 60))/60 + "h " + (minutes % 60) + "m";
+            return (minutes -(minutes % 60))/60 + "h " + (minutes % 60) + "m";
       };
 	
 		
