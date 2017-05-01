@@ -44,7 +44,7 @@
 					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
 					<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p> 
 					<p class="released">Released: {{ movie.released | date }} | Rated: {{ movie.rating }}</p>
-					<p class="websites">Websites: <a ng-href="{{ movie.imdb }}">IMDB</a> | <a ng-href="{{ movie.website }}">Official</a></p>
+					<p class="websites">Websites: <a ng-href="{{ movie.imdb }}" target="_blank">IMDB</a> | <a ng-href="{{ movie.website }}" target="_blank">Official</a></p>
 					
 		            <div class="social">
 		              <p class="likes" ng-click="like($index)"><i class="fa fa-thumbs-up" aria-hidden="true" ></i> {{ movie.likes }}</p>
@@ -58,7 +58,7 @@
 
     <div class="footer">
       <div class="container" ng-controller="HomeController">
-		<a id="github" class="btn btn-lg btn-warning" ng-href="{{ github }}">
+		<a id="github" class="btn btn-lg btn-warning" ng-href="{{ github }}" target="_blank">
 			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}}
   		</a>
       </div>
