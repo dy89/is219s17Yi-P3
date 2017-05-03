@@ -88,22 +88,56 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
-	
-	
+	},
+    { 
+      title:      'Inception', 
+      iscore:     8.8,
+      rating:     'PG-13',
+      runtime:    148,
+      released:   new Date('2010', '07', '16'),
+      country:    'USA',
+      posters:    ['img/inception1_1.jpg','img/inception1_2.jpg'],
+      imdb:       'http://www.imdb.com/title/tt1375666',
+      website:    'https://www.facebook.com/inception',
+      likes:      632,
+      dislikes:   95,
+      posterindex: 0
+      },
+    { 
+      title:      'Mad Max: Fury Road', 
+      iscore:     8.1,
+      rating:     'R',
+      runtime:    120,
+      released:   new Date('2015', '05', '15'),
+      country:    'USA',
+      posters:    ['img/madmax_1.jpg','img/madmax_2.jpg'],
+      imdb:       'http://www.imdb.com/title/tt1392190',
+      website:    'https://www.facebook.com/MadMaxMovie',
+      likes:      876,
+      dislikes:   93,
+      posterindex: 0
+      },
+    { 
+      title:      'The Lord of the Rings: The Fellowship of the Ring', 
+      iscore:     8.8,
+      rating:     'PG-13',
+      runtime:    178,
+      released:   new Date('2001', '12', '19'),
+      country:    'USA',
+      posters:    ['img/lotr_1.jpg','img/lotr_2.jpg'],
+      imdb:       'http://www.imdb.com/title/tt0120737',
+      website:    'https://www.facebook.com/lordoftheringstrilogy/',
+      likes:      1000,
+      dislikes:   64,
+      posterindex: 0
+      }
   ];
-	
-	
 
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
 	$scope.title = "IMDB + David's Top 8 Movies";
       $scope.owner = "David";
       $scope.github = "http://www.github.com/dy89/is219s17Yi-P3";
-	
-	
-	
-	
 	
 	
 	
@@ -126,8 +160,6 @@ app.controller('HomeController', ['$scope', function($scope) {
       $scope.timeText = function(minutes){
             return (minutes -(minutes % 60))/60 + "h " + (minutes % 60) + "m";
       };
-	
-		
 	
 	
 }]);
