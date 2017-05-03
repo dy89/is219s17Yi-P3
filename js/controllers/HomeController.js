@@ -94,7 +94,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       iscore:     8.8,
       rating:     'PG-13',
       runtime:    148,
-      released:   new Date('2010', '07', '16'),
+      released:   new Date('2010', '06', '16'),
       country:    'USA',
       posters:    ['img/inception1_1.jpg','img/inception1_2.jpg'],
       imdb:       'http://www.imdb.com/title/tt1375666',
